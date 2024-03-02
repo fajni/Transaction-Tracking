@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "212514130964",
+    "project_id": "login-register-pma",
+    "storage_bucket": "login-register-pma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212514130964:android:346e153774d31693586b01",
+        "android_client_info": {
+          "package_name": "com.example.pracenjetransakcija"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqMCubLrcNf4FrFvGmIiTLD5NnYQrhBxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212514130964:android:e4afe8cdc0f1ca75586b01",
+        "android_client_info": {
+          "package_name": "com.example.transaction_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqMCubLrcNf4FrFvGmIiTLD5NnYQrhBxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

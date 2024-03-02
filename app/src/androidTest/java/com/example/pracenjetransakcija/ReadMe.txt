@@ -1,0 +1,1 @@
+In this folder you're doing UI testing (Fragments, Activities, ...)

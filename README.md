@@ -1,6 +1,6 @@
 # Simple Transaction Tracker
 
-This project was made in android studio version 2022.3.1 (Android Studio Giraffe Path 4)
+This project was made in android studio version 2022.3.1 (Android Studio Giraffe Patch 4)
 
 The idea is to simplify expense/income tracking as simple as posible for each registered user. Android app for managing user's transactions build with Kotlin and Firebase.
 

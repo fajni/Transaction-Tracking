@@ -67,8 +67,10 @@ class TransactionAdapter(private var transactionList: ArrayList<TransactionData>
             //Recyclerview onClickListener to NewActivty
             //prosledjivanje se vrsi putem intent
             holder.itemView.setOnClickListener {
+                Toast.makeText(holder.itemView.context, "Transaction key: " + transactionList[position].key, Toast.LENGTH_SHORT).show()
                 Toast.makeText(holder.itemView.context, "Transaction number: $position", Toast.LENGTH_SHORT).show()
                 val intent = Intent(holder.itemView.context, TransactionInfoActivity::class.java)
+                intent.putExtra("key", transactionList[position].key)
                 intent.putExtra("title", transactionList[position].title)
                 intent.putExtra("amount", transactionList[position].amount.toString())
                 intent.putExtra("info", transactionList[position].info)

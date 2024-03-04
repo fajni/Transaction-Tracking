@@ -44,11 +44,12 @@ class AddTransactionFragment : Fragment() {
 
             database = FirebaseDatabase.getInstance().getReference("Transactions")
 
-            val transaction = TransactionData(title, info, amount, date, userId)
+            val reference = database.push()
+            val key = reference.key?.hashCode() ?: 0
+            val transaction = TransactionData(key.toString(), title, info, amount, date, userId)
 
             if(title.isNotEmpty() && info.isNotEmpty() && date.isNotEmpty() && amount!=0.0 ){
-                val reference = database.push()
-                val key = reference.key?.hashCode() ?: 0
+
                 database.child(key.toString()).setValue(transaction).addOnSuccessListener {
 
                     view.findViewById<EditText>(R.id.title_edit).text.clear()

@@ -4,6 +4,7 @@ import java.util.Calendar
 
 data class TransactionData(
     //all variables fetch from firebase:
+    var key: String? = null,
     var title: String? = null,
     var info: String? = null,
     var amount: Double? = null,

@@ -9,6 +9,8 @@ import android.widget.TextView
 import com.example.pracenjetransakcija.R
 import com.google.firebase.auth.FirebaseAuth
 
+// //               NOT USED IN PROJECT               // //
+
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"

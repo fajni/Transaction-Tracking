@@ -29,6 +29,9 @@ class TransactionInfoActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().getReference("Transactions")
 
+        var key: TextView = findViewById(R.id.key)
+        key.text = intent.getStringExtra("key").toString()
+
         val email: TextView = findViewById(R.id.email_transaction)
         email.text = firebaseAuth.currentUser?.email.toString()
 
@@ -66,6 +69,42 @@ class TransactionInfoActivity : AppCompatActivity() {
         binding.updateTransaction.setOnClickListener {
             updateTransaction()
         }
+
+        /*
+        view.findViewById<Button>(R.id.delete_transaction).setOnClickListener {
+            val database = FirebaseDatabase.getInstance()
+            val reference = database.getReference("Transactions").child("")
+            reference.removeValue().addOnSuccessListener {
+                Toast.makeText(context, "Deleted!", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener{
+                Toast.makeText(context, "Error!", Toast.LENGTH_SHORT).show()
+            }
+        }
+        */
+
+        /*
+        val database = FirebaseDatabase.getInstance()
+        val reference = database.getReference("Transactions")
+        reference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                for (childSnapshot in snapshot.children) {
+                    val childKey = childSnapshot.key
+                    val childValue = childSnapshot.value
+
+                    if(childKey == key.text)
+                        Toast.makeText(baseContext, childKey, Toast.LENGTH_SHORT).show()
+
+                    //Toast.makeText(baseContext, childKey, Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
+         */
+
 
     }
 

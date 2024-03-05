@@ -1,5 +1,6 @@
 package com.example.pracenjetransakcija
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -29,7 +30,7 @@ class TransactionInfoActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().getReference("Transactions")
 
-        var key: TextView = findViewById(R.id.key)
+        val key: TextView = findViewById(R.id.key)
         key.text = intent.getStringExtra("key").toString()
 
         val email: TextView = findViewById(R.id.email_transaction)
@@ -63,24 +64,12 @@ class TransactionInfoActivity : AppCompatActivity() {
         }
 
         binding.deleteTransaction.setOnClickListener {
-            deleteTransaction()
+            deleteTransaction(key.text.toString())
         }
 
         binding.updateTransaction.setOnClickListener {
-            updateTransaction()
+            updateTransaction(key.text.toString())
         }
-
-        /*
-        view.findViewById<Button>(R.id.delete_transaction).setOnClickListener {
-            val database = FirebaseDatabase.getInstance()
-            val reference = database.getReference("Transactions").child("")
-            reference.removeValue().addOnSuccessListener {
-                Toast.makeText(context, "Deleted!", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener{
-                Toast.makeText(context, "Error!", Toast.LENGTH_SHORT).show()
-            }
-        }
-        */
 
         /*
         val database = FirebaseDatabase.getInstance()
@@ -108,12 +97,20 @@ class TransactionInfoActivity : AppCompatActivity() {
 
     }
 
-    private fun deleteTransaction(){
-        Toast.makeText(this, "Delete transaction", Toast.LENGTH_SHORT).show()
+    private fun deleteTransaction(key: String){
+        val database = FirebaseDatabase.getInstance()
+        val reference = database.getReference("Transactions").child(key)
+        reference.removeValue().addOnSuccessListener {
+            Toast.makeText(this, "Deleted transaction $key", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener{
+            Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
+        }
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
-    private fun updateTransaction(){
-        Toast.makeText(this, "Update transaction", Toast.LENGTH_SHORT).show()
+    private fun updateTransaction(key: String){
+        Toast.makeText(this, "Updated transaction $key", Toast.LENGTH_SHORT).show()
 
     }
 }

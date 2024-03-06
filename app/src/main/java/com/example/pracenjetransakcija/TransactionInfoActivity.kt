@@ -68,7 +68,7 @@ class TransactionInfoActivity : AppCompatActivity() {
         }
 
         binding.updateTransaction.setOnClickListener {
-            updateTransaction(key.text.toString())
+            updateTransaction(key.text.toString(), amount.text.toString(), info.text.toString(), date.text.toString(), title.text.toString())
         }
 
         /*
@@ -103,14 +103,28 @@ class TransactionInfoActivity : AppCompatActivity() {
         reference.removeValue().addOnSuccessListener {
             Toast.makeText(this, "Deleted transaction $key", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener{
-            Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Failed to delete transaction $key!", Toast.LENGTH_SHORT).show()
         }
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
-    private fun updateTransaction(key: String){
-        Toast.makeText(this, "Updated transaction $key", Toast.LENGTH_SHORT).show()
+    private fun updateTransaction(key: String, amount: String, info: String, date: String, title: String){
 
+        val database = FirebaseDatabase.getInstance()
+        val reference = database.getReference("Transactions").child(key)
+        val newData = mapOf(
+            "title" to title,
+            "amount" to amount.toDouble(),
+            "info" to info,
+            "date" to date
+        )
+        reference.updateChildren(newData).addOnSuccessListener {
+            Toast.makeText(this, "Updated Transaction $key", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener{
+            Toast.makeText(this, "Failed To Update Transaction $key", Toast.LENGTH_SHORT).show()
+        }
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }

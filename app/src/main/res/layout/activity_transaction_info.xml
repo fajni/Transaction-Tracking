@@ -8,11 +8,42 @@
 
     android:background="@drawable/background3"
 
-    android:paddingLeft="20dp"
-    android:paddingTop="10dp"
-    android:paddingRight="20dp"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
     android:paddingBottom="40dp"
     >
+
+    <ImageView
+        android:id="@+id/money_symbol1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/money_symbol"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/money_symbol2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/money_symbol"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/transaction_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/money_symbol1"
+        app:layout_constraintRight_toRightOf="@id/money_symbol2"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/title_part"
@@ -27,6 +58,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
 
         android:layout_marginTop="60dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         >
 
         <ImageView
@@ -37,7 +71,7 @@
             android:layout_marginRight="30dp"
             />
 
-        <TextView
+        <EditText
             android:id="@+id/title_transaction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,6 +91,8 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/title_part"
         android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         >
 
         <!--USER:-->
@@ -130,13 +166,15 @@
                 android:textStyle="bold"
                 />
 
-            <TextView
+            <EditText
                 android:id="@+id/amount_transaction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="90.000$"
                 android:textColor="@color/blue"
                 android:textSize="20sp"
+                android:padding="12dp"
+                android:backgroundTint="@android:color/transparent"
                 />
         </LinearLayout>
 
@@ -156,12 +194,14 @@
                 android:textStyle="bold"
                 />
 
-            <TextView
+            <EditText
                 android:id="@+id/info_transaction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="info "
                 android:textSize="20sp"
+                android:padding="12dp"
+                android:backgroundTint="@android:color/transparent"
                 />
         </LinearLayout>
 
@@ -181,12 +221,14 @@
                 android:textStyle="bold"
                 />
 
-            <TextView
+            <EditText
                 android:id="@+id/date_transaction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="21/12/2023"
                 android:textSize="20sp"
+                android:padding="12dp"
+                android:backgroundTint="@android:color/transparent"
                 />
         </LinearLayout>
 

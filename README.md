@@ -1,8 +1,8 @@
 # Simple Transaction Tracker
 
-This project was made in android studio version 2022.3.1 (Android Studio Giraffe Patch 4)
+This project was made in android studio version 2022.3.1 (Android Studio Giraffe Patch 4). Android app for managing user's transactions build with Kotlin and Firebase.
 
-The idea is to simplify expense/income tracking as simple as posible for each registered user. Android app for managing user's transactions build with Kotlin and Firebase.
+The idea is to simplify expense/income tracking as simple as posible for each registered user. Every user has their own transactions. 
 
 ## User interface 
 
@@ -17,6 +17,7 @@ Pics of the app's user interface:
 <img src = "images/Account.png" width = 180>
 <img src = "images/TransactionInfo1.png" width = 180>
 <img src = "images/TransactionInfo2.png" width = 180>
+<img src = "images/TransactionUpdate.png" width = 180>
 </details>
 
 <br/>

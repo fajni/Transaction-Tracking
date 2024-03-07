@@ -14,7 +14,7 @@ Pics of the app's user interface:
 <img src = "images/SignUp.png" width = 180/>
 <img src = "images/Transactions.png" width = 180/>
 <img src = "images/AddTransaction.png" width = 180>
-<img src = "images/Account.png" width = 180>
+<img src = "images/Account,Profile.png" width = 180>
 <img src = "images/TransactionInfo1.png" width = 180>
 <img src = "images/TransactionInfo2.png" width = 180>
 <img src = "images/TransactionUpdate.png" width = 180>

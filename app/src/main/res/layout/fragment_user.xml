@@ -114,7 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
-                    android:textColor="@color/green"
+                    android:textColor="@color/blue"
                     android:text="unavailable"
                     />
             </LinearLayout>
@@ -157,6 +157,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="unavailable"
+                    android:textColor="@color/green"
                     />
             </LinearLayout>
             <LinearLayout
@@ -217,6 +218,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="unavailable"
+                    android:textColor="@color/purple2"
                     />
             </LinearLayout>
         </LinearLayout>

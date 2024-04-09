@@ -5,9 +5,12 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.contains
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pracenjetransakcija.R
 import com.example.pracenjetransakcija.TransactionInfoActivity
@@ -67,7 +70,7 @@ class TransactionAdapter(private var transactionList: ArrayList<TransactionData>
             //Recyclerview onClickListener to NewActivty
             //prosledjivanje se vrsi putem intent
             holder.itemView.setOnClickListener {
-                Toast.makeText(holder.itemView.context, "Transaction key: " + transactionList[position].key, Toast.LENGTH_SHORT).show()
+                // Toast.makeText(holder.itemView.context, "Transaction key: " + transactionList[position].key, Toast.LENGTH_SHORT).show()
                 Toast.makeText(holder.itemView.context, "Transaction number: $position", Toast.LENGTH_SHORT).show()
                 val intent = Intent(holder.itemView.context, TransactionInfoActivity::class.java)
                 intent.putExtra("key", transactionList[position].key)
@@ -80,8 +83,8 @@ class TransactionAdapter(private var transactionList: ArrayList<TransactionData>
         }
     }
 
-    fun searchTransactionList(searchList: ArrayList<TransactionData>) {
-        transactionList = searchList
-        notifyDataSetChanged()
+    fun searchTransactionList() {
+        //TODO
+        transactionList
     }
 }

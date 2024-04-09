@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import com.example.pracenjetransakcija.R
 import com.example.pracenjetransakcija.models.TransactionData
@@ -19,9 +22,10 @@ class AddTransactionFragment : Fragment() {
     private lateinit var database: DatabaseReference
     private lateinit var firebaseAuth: FirebaseAuth
 
+    private var spinnerOptions = arrayOf("Maintenance", "Salary", "Shopping", "Online", "Savings")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -31,6 +35,52 @@ class AddTransactionFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val view: View = inflater.inflate(R.layout.fragment_add_transaction, container, false)
+
+        val dropDownMenu = view.findViewById<Spinner>(R.id.spinnerOptions)
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, spinnerOptions)
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
+
+        dropDownMenu.adapter = adapter
+        var titleEdit = view.findViewById<EditText>(R.id.title_edit)
+
+        dropDownMenu.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val selectedItem = spinnerOptions[position]
+                when (selectedItem){
+                    "Maintenance" -> {
+                        titleEdit.setText(selectedItem)
+                        Toast.makeText(context, selectedItem, Toast.LENGTH_SHORT).show()
+                    }
+                    "Salary" -> {
+                        titleEdit.setText(selectedItem)
+                        Toast.makeText(context, selectedItem, Toast.LENGTH_SHORT).show()
+                    }
+                    "Shopping" -> {
+                        titleEdit.setText(selectedItem)
+                        Toast.makeText(context, selectedItem, Toast.LENGTH_SHORT).show()
+                    }
+                    "Online" -> {
+                        titleEdit.setText(selectedItem)
+                        Toast.makeText(context, selectedItem, Toast.LENGTH_SHORT).show()
+                    }
+                    "Savings" -> {
+                        titleEdit.setText(selectedItem)
+                        Toast.makeText(context, selectedItem, Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }
 
         view.findViewById<Button>(R.id.saveBtn).setOnClickListener {
 

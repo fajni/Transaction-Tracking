@@ -30,6 +30,34 @@
             android:layout_marginBottom="20dp"
             />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose predefined title or add yours"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/purple2"
+            android:paddingBottom="5dp"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:background="@drawable/rounded_corners"
+            android:padding="16dp"
+            android:layout_marginBottom="15dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_marginBottom="15dp"
+            />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/title"
             android:layout_width="match_parent"

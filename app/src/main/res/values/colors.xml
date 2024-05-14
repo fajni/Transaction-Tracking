@@ -12,6 +12,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="blue">#03A9F4</color>
     <color name="red">#8f2121</color>
-    <color name="green">#3b8022</color>
     <color name="orange">#FF5B00</color>
+
+    <color name="green">#3b8022</color>
+    <color name="mygreen1">#1d8337</color>
+    <color name="mygreen2">#16632A</color>
+    <color name="mygreen3">#0F421C</color>
+
 </resources>

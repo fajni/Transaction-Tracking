@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".TransactionInfoActivity"
 
-    android:background="@drawable/background3"
+    android:background="@color/mygreen1"
 
     android:paddingLeft="0dp"
     android:paddingTop="0dp"
@@ -37,7 +37,7 @@
         android:layout_marginTop="5dp"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@id/money_symbol1"
@@ -80,6 +80,7 @@
             android:textStyle="bold"
             android:padding="15dp"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:background="@drawable/rounded_corners"
             />
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -108,6 +109,7 @@
                 android:text="EMAIL: "
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@color/white"
                 />
 
             <TextView
@@ -116,6 +118,7 @@
                 android:layout_height="wrap_content"
                 android:text="your_email@gmail.com"
                 android:textSize="20sp"
+                android:textColor="@color/white"
                 />
         </LinearLayout>
 
@@ -132,6 +135,7 @@
                 android:text="ID: "
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@color/white"
                 />
 
             <TextView
@@ -140,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:text="1234567891234567891234567890"
                 android:textSize="20sp"
+                android:textColor="@color/white"
                 />
         </LinearLayout>
 
@@ -164,6 +169,7 @@
                 android:text="AMOUNT: "
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@color/white"
                 />
 
             <EditText
@@ -192,6 +198,7 @@
                 android:text="INFO: "
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@color/white"
                 />
 
             <EditText
@@ -201,6 +208,7 @@
                 android:text="info "
                 android:textSize="20sp"
                 android:padding="12dp"
+                android:textColor="@color/white"
                 android:backgroundTint="@android:color/transparent"
                 />
         </LinearLayout>
@@ -219,6 +227,7 @@
                 android:text="DATE: "
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:textColor="@color/white"
                 />
 
             <EditText
@@ -229,6 +238,7 @@
                 android:textSize="20sp"
                 android:padding="12dp"
                 android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/white"
                 />
         </LinearLayout>
 

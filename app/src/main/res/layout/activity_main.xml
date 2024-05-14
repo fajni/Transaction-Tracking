@@ -8,7 +8,7 @@
 
     tools:context=".MainActivity"
 
-    android:background="@drawable/background3"
+    android:background="@color/mygreen3"
     android:paddingLeft="0dp"
     android:paddingTop="0dp"
     android:paddingRight="0dp"
@@ -38,7 +38,7 @@
         android:layout_marginTop="5dp"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@id/money_symbol1"
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white2"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="52dp"
         android:layout_marginBottom="80dp"
         />
 
@@ -64,9 +64,11 @@
         app:menu="@menu/bottom_nav_menu"
         app:itemIconSize="35dp"
         app:itemPaddingTop="20dp"
-        app:itemIconTint="@color/purple2"
-        app:itemTextColor="@color/purple2"
-        android:background="@drawable/rounded_corners"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="@drawable/rounded_corners_greenlines2"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemRippleColor="@color/green"
         >
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -76,7 +78,7 @@
             android:src="@drawable/plus_symbol"
             app:maxImageSize="40dp"
             android:layout_gravity="center"
-            android:backgroundTint="@color/purple2"
+            android:backgroundTint="@color/white"
             android:contentDescription="Add New Transaction"
             />
 

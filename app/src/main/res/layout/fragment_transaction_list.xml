@@ -24,9 +24,10 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
-        android:background="@drawable/rounded_corners"
         app:iconifiedByDefault="false"
         app:queryHint="Enter description to search"
+        android:background="@drawable/rounded_corners_none"
+        android:textAppearance="@color/white"
         />
 
     <FrameLayout

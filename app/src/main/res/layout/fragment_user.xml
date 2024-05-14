@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.UserFragment"
-    android:background="@android:color/transparent"
+    android:background="@color/mygreen1"
 
     android:paddingLeft="20dp"
     android:paddingTop="0dp"
@@ -50,6 +50,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Email: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/user_email"
@@ -57,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="email@gmail.com"
-
+                    android:textColor="@color/white"
                     />
             </LinearLayout>
 
@@ -71,6 +72,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="ID: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/user_id"
@@ -78,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="1234567891234567891234567890"
+                    android:textColor="@color/white"
                     />
             </LinearLayout>
 
@@ -108,6 +111,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Available money: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/money_available"
@@ -129,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Total money spent: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/money_spent"
@@ -150,6 +155,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Total money added: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/money_added"
@@ -171,6 +177,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Salary: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/salary"
@@ -178,6 +185,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="unavailable"
+                    android:textColor="@color/white"
                     />
             </LinearLayout>
             <LinearLayout
@@ -191,6 +199,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Overdraft: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/overdraft"
@@ -198,6 +207,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="unavailable"
+                    android:textColor="@color/white"
                     />
             </LinearLayout>
             <LinearLayout
@@ -211,6 +221,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Number of transactions: "
+                    android:textColor="@color/white"
                     />
                 <TextView
                     android:id="@+id/transaction_number"
@@ -263,17 +274,18 @@
     </LinearLayout>
     -->
 
-    <com.google.android.material.button.MaterialButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        style="@style/Widget.MaterialComponents.Button"
-
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
         android:text="Log out"
         android:textSize="17sp"
         app:icon="@drawable/baseline_logout_24"
         app:iconSize="20dp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corners_mygreen2"
 
         android:layout_gravity="center|bottom"
         android:gravity="center"

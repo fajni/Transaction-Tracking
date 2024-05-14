@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.AddTransactionFragment"
-    android:background="@android:color/transparent"
+    android:background="@color/mygreen1"
     >
 
     <LinearLayout
@@ -28,6 +28,7 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
             />
 
         <TextView
@@ -37,7 +38,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:textColor="@color/purple2"
+            android:textColor="@color/white"
             android:paddingBottom="5dp"
             />
 
@@ -73,8 +74,8 @@
                 android:drawablePadding="10dp"
                 android:hint="Enter Title"
                 android:inputType="text"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -92,8 +93,8 @@
                 android:drawablePadding="10dp"
                 android:hint="Enter Amount"
                 android:inputType="text|numberDecimal"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -111,8 +112,8 @@
                 android:drawablePadding="10dp"
                 android:hint="Enter Info"
                 android:inputType="text"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -129,11 +130,11 @@
                 android:drawablePadding="10dp"
                 android:hint="Enter Date"
                 android:inputType="date"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"/>
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -141,6 +142,8 @@
             android:text="SAVE"
             android:textStyle="bold"
             android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_corners_mygreen2"
             />
 
     </LinearLayout>
